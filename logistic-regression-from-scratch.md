@@ -163,8 +163,6 @@
         "\n",
         "  # Find dw\n",
         "  dw = np.matmul(X.transpose(), difference)\n",
-        "  # The following line is incorrect, it should be the mean of the matrix product, not the mean of each element of the resulting vector.\n",
-        "  # dw = np.array([np.mean(grad) for grad in dw])\n",
         "  dw = dw / X.shape[0] # Add scaling by 1/N\n",
         "\n",
         "  return dw, db"
